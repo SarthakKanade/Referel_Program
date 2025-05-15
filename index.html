@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ITM Student Referral Program</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header Section -->
+  <header class="header">
+    <div class="left-section">
+      <img src="ISU-LOGO.png" alt="ITM Logo">
+    </div>
+    <div class="right-section">
+      <span class="years-number">35</span>
+      <div class="years-text">
+        Years of<br>
+        excellence in<br>
+        education
+      </div>
+    </div>
+  </header>
+
+  <!-- Ticker Section -->
+  <div class="ticker-container">
+    <div class="ticker-content">
+      <span class="ticker-item">✨Program created by Unicorn Founders, CTOs, VPs & Engineering Directors</span>
+      <span class="ticker-item">✨Learn from Real developers</span>
+      <span class="ticker-item">✨Access to actual VCs</span>
+      <span class="ticker-item">✨Develop Zomato, Hotstar, Zerodha, PayTM like Projects</span>
+      <span class="ticker-item">✨1 Year Paid Internship</span>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>
+        Refer <span class="highlight">India's Best B.Tech CSE</span><br>
+        & earn <span class="reward">₹60K / iPhone 15</span>
+      </h1>
+      <div class="img-container">
+        <img src="iPhone.png" alt="iphone" class="heroimg">
+        <img src="cash.png" alt="cash" class="heroimg">
+
+        </div>
+      <button id="openModalBtn" class="open-button">Refer Now</button>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- Benefits Section -->
+  <section class="benefits">
+    <div class="container">
+      <h2 class="section-title">Why Participate?</h2>
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <i class="fas fa-gift"></i>
+          </div>
+          <h3 class="benefit-title">Exclusive Rewards</h3>
+          <p>Earn cash prizes, tech gadgets, and special campus privileges for successful referrals.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <i class="fas fa-network-wired"></i>
+          </div>
+          <h3 class="benefit-title">Build Your Network</h3>
+          <p>Connect with talented peers and grow your professional network before graduation.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <i class="fas fa-award"></i>
+          </div>
+          <h3 class="benefit-title">Enhance Your Profile</h3>
+          <p>Gain recognition from faculty and boost your leadership credentials.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <h3 class="benefit-title">Wall of Fame</h3>
+          <p>Get your name engraved on our Wall of Fame at our B.Tech CSE Campus in Mumbai.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials">
+    <div class="container">
+      <h2 class="section-title">Student Voices: Powered by Referrals</h2>
+      <div class="testimonial-container">
+        <div class="testimonial-card">
+          <p class="testimonial-text">
+            "I got to know about ITM through a friend who referred me, and I'm genuinely thankful! The referral program made my admission process smoother and gave me an instant connection inside the college."
+          </p>
+          <p class="testimonial-author">— Aarav M., BBA Student</p>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-text">
+            "When my senior referred me to ITM, I was a bit unsure. But now I realize it was one of the best decisions I've made. The referral program truly builds bonds beyond academics."
+          </p>
+          <p class="testimonial-author">— Ritika S., MBA (Finance)</p>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-text">
+            "Thanks to my friend's referral, I discovered ITM. It made the entire admission process feel personal and stress-free. The referral program isn't just about rewards—it's about real connections."
+          </p>
+          <p class="testimonial-author">— Neeraj D., B.Tech Student</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Referral Modal -->
+  <div id="referModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" id="closeModalBtn">&times;</span>
+      <h2>Refer Form</h2>
+      <p class="subtext">Fill this form to get your reward</p>
+      
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+
+        <label for="mobile">Mobile:</label>
+        <input type="tel" id="mobile" placeholder="Enter mobile number" required>
+
+        <label for="relation">How are you related to ITM?</label>
+        <select id="relation" required>
+          <option value="">Select Source</option>
+          <option value="student">Current Student</option>
+          <option value="alumni">Alumni</option>
+          <option value="faculty">Faculty</option>
+          <option value="friend">Friend</option>
+        </select>
+
+        <button type="submit" class="submit-btn">Generate Link</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // Modal functionality
+    const modal = document.getElementById('referModal');
+    const openBtn = document.getElementById('openModalBtn');
+    const closeBtn = document.getElementById('closeModalBtn');
+    
+    openBtn.addEventListener('click', () => {
+      modal.style.display = 'block';
+    });
+    
+    closeBtn.addEventListener('click', () => {
+      modal.style.display = 'none';
+    });
+    
+    window.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>
+
+<section class="brochure">
+    <div class="container">
+        <h2 class="section-title">Share these Flyers / Brochures into your Network</h2>
+        <h3 class="brochure-text">Get all the details about the program, curriculum, and more.</h3>
+        <div class="brochure-links">
+            <div class="flyer-download">
+                <img src="flyer.png" alt="Flyer" class="Brochures-img">
+                <button id="openModalBtn" class="open-button">
+                    <a href="flyer.png" download>Download Flyer</a>
+                </button>
+            </div>
+            <div class="brochure-download">
+                <img src="brochure.png" alt="Brochure" class="Brochures-img">
+                <button id="openModalBtn" class="open-button">
+                    <a href="brochure.png" download>Download Brochure</a>
+                </button>
+            </div>
+                
+        </div>
+    </div>
+</section>
